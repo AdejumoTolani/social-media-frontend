@@ -1,0 +1,40 @@
+<div class="body">
+<div class="auth-container">
+  <h2>{{ isRegistering ? 'Register' : 'Login' }}</h2>
+  <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+    <div *ngIf="isRegistering">
+      <div class="form-group">
+        <label for="displayName">Display Name</label>
+        <input type="text" id="displayName" name="displayName" ngModel required >
+        <small *ngIf='errors' class="error-message">{{ errors.displayName }}</small>
+
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" ngModel required>
+        <small *ngIf='errors' class="error-message">{{ errors.email }}</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" ngModel required>
+      <small *ngIf='errors' class="error-message">{{ errors.username }}</small>
+
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" ngModel required>
+      <small *ngIf='errors' class="error-message">{{ errors.password }}</small>
+
+    </div>
+    <small *ngIf='errors' class="error-message">{{ errors.server }}</small>
+
+    <div class="form-group" *ngIf="!isRegistering">
+      <a href="#">Forgot Password?</a>
+    </div>
+    <button type="submit">{{ isRegistering ? 'Register' : 'Login' }}</button>
+  </form>
+  <p>{{ isRegistering ? 'Already have an account?' : 'Don\'t have an account?' }} <a href="#" (click)="toggleRegisterMode()">{{ isRegistering ? 'Login' : 'Register' }}</a></p>
+</div>
+</div>
+

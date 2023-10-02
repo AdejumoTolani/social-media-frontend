@@ -1,0 +1,42 @@
+<!-- full-post.component.html -->
+<div class="full-post-container">
+  <!-- Post Content -->
+  <div class="post-content">
+    <div class="post-header">
+      <img src="../../../assets/pfp.jpg" alt="user profile picture" class="header-picture">
+      <div class="user-details">
+        <h2>{{ fullPost.userId.displayName }}</h2>
+        <h3  (click)="getUser()" id='getUser' >@{{fullPost.userId.username}}</h3>
+      </div>
+    </div>
+    <br>
+    <div class="post">
+      <p>{{ fullPost.post}}</p>
+    </div>
+  </div>
+
+  <!-- Comments Section -->
+  <div class="comments">
+    <h3>Comments</h3>
+    <!-- Add Comment Input -->
+    <div class="add-comment">
+      <input
+        type="text"
+        placeholder="Add a comment..."
+        #comment
+      />
+      <button (click)="addComment(comment.value)">Comment</button>
+    </div>
+    <br>
+    <ul>
+      <!-- Display existing comments -->
+      <li *ngFor="let comment of fullPost.comments">
+        <strong>{{ comment.userId.displayName }}:</strong> {{ comment.content}}
+        <!-- <app-post [post]="comment"></app-post> -->
+        <app-comment [user]="comment"></app-comment>
+      </li>
+    </ul>
+
+  </div>
+</div>
+<app-nav></app-nav>

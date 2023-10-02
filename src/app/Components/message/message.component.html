@@ -1,0 +1,16 @@
+<div class="message-container">
+  <div class="message-history">
+    <div class="message received">Hello!</div>
+    <div class="message sent">Hi there!</div>
+
+    <div *ngFor="let message of messages" class="newMessages">
+       <div class="message" [ngClass]="{ 'received': currUser._id !== message.sender, 'sent': currUser._id === message.sender }">
+        {{ message.message }}
+      </div>
+    </div>
+  </div>
+  <div class="message-input">
+    <input type="text" id="message" placeholder="Type your message..." #input />
+    <button id="send" (click)="send(input.value)">Send</button>
+  </div>
+</div>

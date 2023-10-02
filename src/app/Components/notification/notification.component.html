@@ -1,0 +1,8 @@
+<!-- notification.component.html -->
+<h2>Notifications</h2>
+<div class="notification-container">
+  <div *ngFor="let notification of notifications" class="notification">
+    {{ notification.senderName}} {{notification.type}}d your post.
+  </div>
+</div>
+

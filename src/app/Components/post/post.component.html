@@ -1,0 +1,26 @@
+<div class="outer" (click)="getFullPost()">
+  <div class="user-details">
+    <small>{{ post[0].userId.displayName }}</small>
+    <small class="username">@{{ post[0].userId.username }}</small>
+  </div>
+  <hr>
+  <div class="post-content">
+    {{ post[0].post }}
+  </div>
+  <br>
+  <div class="reactions">
+    <div>
+      
+      <span class="material-symbols-outlined" (click)="toggleLike()" [ngClass]="{'fill': liked}">
+        favorite
+      </span>
+      {{ post[0].likes.length }} <!-- Display the number of likes -->
+    </div>
+    <span class="material-symbols-outlined" (click)="repost($event)">
+      360
+    </span>
+    <span class="material-symbols-outlined" (click)="visib($event)">
+      visibility
+    </span>
+  </div>
+</div>

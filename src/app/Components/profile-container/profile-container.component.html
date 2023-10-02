@@ -1,0 +1,75 @@
+
+<div class="profile-container">
+  <!-- Header Section -->
+  <div class="profile-header">
+    <!-- User Info -->
+    <div class="user-info">
+      <!-- <img  alt="User Avatar"> -->
+      <div class="images">
+      <img class="avatar"
+        src="../../../assets/desktop-wallpaper-steph-cella-on-stuff-in-2021-spongebob-funny-funny-drawings-funny-profile-1080x1080-funny.jpg"
+        alt="avatarPicture"
+      />
+      
+
+
+      <img class="header"
+        src="../../../assets/4ee81e48458093.5dc47c0a0352c.jpg"
+        alt="Header Picture"
+      />
+      </div>
+    </div>
+    <!-- Header Picture -->
+    <div class="header-picture">
+      <p>{{currUser.displayName }}</p>
+      <h2>@{{ currUser.username }}</h2>
+      <p>{{ currUser.aboutProfile }}</p>
+      <!-- <img  alt="Header Picture"> -->
+    </div>
+
+    <span>Follows:{{ currUser.follows }} </span>
+    <span>Followed By:{{ currUser.followerNum }} </span>
+    <!-- <button (click)="sendMessage('hi')">DM user</button> -->
+  </div>
+  <br />
+
+  <div class="bottom">
+    <nav>
+      <button (click)="swapNav('posts')" [class.active]="activeNav === 'posts'">
+        Posts
+      </button>
+      <button
+        (click)="swapNav('reposts')"
+        [class.active]="activeNav === 'reposts'"
+      >
+        Reposts
+      </button>
+      <button (click)="swapNav('likes')" [class.active]="activeNav === 'likes'">
+        Likes
+      </button>
+      <button (click)="swapNav('media')" [class.active]="activeNav === 'media'">
+        idk
+      </button>
+    </nav>
+  </div>
+
+  <div class="bottom-section">
+    <div class="user-posts" *ngIf="posts">
+      <div class="post" *ngFor="let post of currUser.userPosts">
+        <app-post
+          [post]="post"
+        ></app-post>
+      </div>
+    </div>
+
+    <div class="user-reposts" *ngIf="reposts">
+    </div>
+
+    <div class="user-likes" *ngIf="likes">
+    </div>
+
+    <div class="user-media" *ngIf="media">
+    </div>
+  </div>
+</div>
+

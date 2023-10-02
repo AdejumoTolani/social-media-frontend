@@ -1,0 +1,64 @@
+
+.message-container {
+  /* max-height: calc(100vh - 100px); */
+  max-height: 100vh;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style for the message history section */
+.message-history {
+  flex-grow: 1;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.message {
+  padding: 5px;
+  margin-bottom: 10px;
+  max-width: 70%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.newMessages{
+  display: flex;
+}
+.message.received {
+  background-color: #333;
+}
+
+.message.sent {
+  background-color: #007bff;
+}
+
+/* Style for the message input section */
+.message-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button#send {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button#send:hover {
+  background-color: #0056b3;
+}

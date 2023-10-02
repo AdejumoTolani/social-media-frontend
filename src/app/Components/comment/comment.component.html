@@ -1,0 +1,18 @@
+
+<!-- comment.component.html -->
+<div class="comment">
+  <div class="user-info">
+    <img class="header-picture" src="../../../assets/desktop-wallpaper-steph-cella-on-stuff-in-2021-spongebob-funny-funny-drawings-funny-profile-1080x1080-funny.jpg" alt="Header Picture" />
+    <div class="user">
+      <span class="display-name">{{ user.userId.displayName }}</span>
+      <span class="username">@{{ user.userId.username }}</span>
+    </div>
+  </div>
+  <div class="comment-content">
+    {{ user.content }}
+  </div>
+  <div class="actions">
+    <button (click)="toggleLike()" >Like</button>
+    <button (click)="repost()">Repost</button>
+  </div>
+</div>

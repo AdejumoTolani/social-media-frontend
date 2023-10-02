@@ -1,0 +1,15 @@
+/* Ensure the "outer" div is a flex container */
+.outer {
+  display: flex;
+  flex-direction: column; 
+  height: 100vh;
+}
+
+.content {
+  flex: 1; 
+  overflow-y: auto; 
+  padding: 10px; 
+  margin-bottom: 30px;
+}
+
+

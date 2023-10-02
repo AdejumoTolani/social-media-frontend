@@ -1,0 +1,37 @@
+.user{
+  position: fixed;
+
+}
+
+button{
+    background-color:red;
+   
+}
+/* Style the profile container */
+.outer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* margin: 20px; */
+  
+}
+
+.post {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  /* z-index: 9999999999; */
+}
+
+.makePost{
+  z-index: 9999999999;
+  background-color: rgb(205, 121, 138);
+}

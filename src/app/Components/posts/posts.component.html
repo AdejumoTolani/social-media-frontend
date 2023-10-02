@@ -1,0 +1,23 @@
+<p class="makePost">
+
+    <input type="text" #post>
+    <br>
+    <button (click)="makePost(post.value)">Soro</button>
+    <br><br>
+</p>
+
+
+<div class="outer">
+    <section class="search">
+        <label for="search">Search Bolaji here:</label>
+        <input type="text" id="search" #searchValue>
+        <button (click)="search(searchValue.value)">search</button>
+    </section>
+    <div class="user" *ngIf="searchedUser">
+        <app-profile-container></app-profile-container>
+    </div>
+    <div class="post" *ngFor="let post of posts">
+        <app-post [post] = 'post'></app-post>
+    </div>
+</div>
+

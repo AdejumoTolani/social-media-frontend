@@ -1,0 +1,65 @@
+/* comment.component.css */
+.comment {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(116, 122, 155);
+  color: white;
+  font-family: "Quicksand";
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.header-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.display-name {
+  margin-left: 5px;
+  color: black;
+  font-weight: bold;
+}
+
+.comment-content {
+  margin-top: 10px;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+.liked {
+  color: blue; /* You can style the like button when it's liked */
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+button:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+  background-color: white;
+  color:#007bff
+}
+
+.user{
+  display: flex;
+  flex-direction: column;
+}
